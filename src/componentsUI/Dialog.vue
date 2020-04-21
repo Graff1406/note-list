@@ -89,6 +89,7 @@ export default {
   padding: 20px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 500px;
 }
 
 /* The Close Button */
