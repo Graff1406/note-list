@@ -82,7 +82,6 @@ export default {
     async remove() {
       this.close()
       await this.$store.dispatch('A_DELETE_NOTE', this.note.id)
-      console.log('LOG: remove -> this.$router', this.$router)
       this.$router.push('/')
     },
     touchClose() {
