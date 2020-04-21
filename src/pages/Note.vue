@@ -39,14 +39,9 @@ import Dialog from '@/componentsUI/Dialog'
 import NewNoteField from '@/components/NewNoteField'
 import NotFound from '@/layouts/NotFound'
 import clone from '@/mixins/clone'
-import { HOME } from '@/links/index'
 import { mapGetters } from 'vuex'
 export default {
   name: 'Note',
-  // metaInfo: {
-  //   title: this.note.title ? this.note.title : 'Page not found',
-  //   titleTemplate: null
-  // },
   components: {
     EditNote,
     Dialog,
@@ -87,7 +82,8 @@ export default {
     async remove() {
       this.close()
       await this.$store.dispatch('A_DELETE_NOTE', this.note.id)
-      this.$router.push(HOME)
+      console.log('LOG: remove -> this.$router', this.$router)
+      this.$router.push('/')
     },
     touchClose() {
       // if the old value in input has been changed show dialog

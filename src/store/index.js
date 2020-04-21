@@ -49,13 +49,13 @@ const store = new Vuex.Store({
       
     },
     async A_CREATE_NOTE ({ commit, dispatch }, note) {
-      query(commit, dispatch, 'post', [`${NOTES}.json`, note])
+      await query(commit, dispatch, 'post', [`${NOTES}.json`, note])
     },
     async A_UPDATE_NOTE ({commit, dispatch }, data) {
-      query(commit, dispatch, 'put', [`${NOTES}/${data.id}.json`, data])
+      await query(commit, dispatch, 'put', [`${NOTES}/${data.id}.json`, data])
     },
     async A_DELETE_NOTE ({commit, dispatch }, id) {
-      query(commit, dispatch, 'delete', [`${NOTES}/${id}.json`])
+      await query(commit, dispatch, 'delete', [`${NOTES}/${id}.json`])
     }
   },
   getters: {
