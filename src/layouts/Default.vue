@@ -14,6 +14,10 @@ import Dialog from '@/componentsUI/Dialog'
 import { mapGetters } from 'vuex'
 export default {
   name: 'DefaultLayout',
+  metaInfo: {
+    title: 'Note list creator',
+    titleTemplate: null
+  },
   components: {
     Dialog
   },

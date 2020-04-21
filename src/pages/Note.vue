@@ -43,6 +43,10 @@ import { HOME } from '@/links/index'
 import { mapGetters } from 'vuex'
 export default {
   name: 'Note',
+  // metaInfo: {
+  //   title: this.note.title ? this.note.title : 'Page not found',
+  //   titleTemplate: null
+  // },
   components: {
     EditNote,
     Dialog,
@@ -50,6 +54,10 @@ export default {
     NotFound
   },
   mixins: [clone],
+  metaInfo() {
+    const title = this.note.title ? this.note.title : 'Page not found'
+    return { title, titleTemplate: null }
+  },
   data() {
     return {
       form: {},
