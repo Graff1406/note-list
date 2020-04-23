@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="note" class="container">
+    <div v-if="Object.keys(note).length" class="container">
       <div class="my-3 uppercase">
         <router-link to="/" class="link-styles">Home</router-link>
         <span class="text--color-grey">{{ ` / ${note.title}` | textLength }}</span>
