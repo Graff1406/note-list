@@ -1,8 +1,8 @@
 <template>
   <ContainerNote>
     <template v-slot:text>
-      <h1>This page does not exist or has been deleted</h1>
-      <router-link to="/">Go to home page</router-link>
+      <h4>This page does not exist or has been deleted</h4>
+      <div><router-link to="/">Go to home page</router-link></div>
     </template>
   </ContainerNote>
 </template>
